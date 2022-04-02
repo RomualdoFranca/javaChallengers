@@ -24,9 +24,7 @@ public class banknotes {
             int notasDe100 = value / 100;
             System.out.printf("%d nota(s) de R$ 100,00 ", notasDe100);
         }
-        else if (value % 100 <= 99 && <= 50) {
-            int notasDe50 = (value % 100) / 50;
-        }
+
         sc.close();
     }
 }
