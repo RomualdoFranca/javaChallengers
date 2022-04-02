@@ -10,7 +10,7 @@ public class distanceBetweenTwoPoints {
         //  variables
         double x1, y1;
         double x2, y2;
-
+        //  Inputs
         System.out.println("Insira a coordenada x1 do p1");
         x1 = sc.nextDouble();
         System.out.println("Insira a coordenada y1 do p1");
@@ -19,6 +19,7 @@ public class distanceBetweenTwoPoints {
         x2 = sc.nextDouble();
         System.out.println("Insira a coordenada y2 do p2");
         y2 = sc.nextDouble();
+        //  formula do calculo da distancia entre dois pontos
         double distance = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
         System.out.printf("The distance is: %.4f\n", distance);
 
