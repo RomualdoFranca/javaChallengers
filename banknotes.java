@@ -13,16 +13,20 @@ public class banknotes {
         The input file contains an integer value N (0 < N < 1000000).
         Output
         Print the read number and the minimum quantity of each necessary banknotes in Portuguese language,
-        as the given example. Do not forget to print the end of line after each line,
-        otherwise you will receive “Presentation Error”.
+        as the given example.
         */
         Locale.setDefault(Locale.US);
         Scanner sc  = new Scanner(System.in);
         int value;
         System.out.println("Informe o valor do saque:");
         value = sc.nextInt();
-
-
+        if (value >= 100 && value % 100 == 0){
+            int notasDe100 = value / 100;
+            System.out.printf("%d nota(s) de R$ 100,00 ", notasDe100);
+        }
+        else if (value % 100 <= 99 && <= 50) {
+            int notasDe50 = (value % 100) / 50;
+        }
         sc.close();
     }
 }
