@@ -21,8 +21,9 @@ public class banknotes {
         System.out.println("Informe o valor do saque:");
         value = sc.nextInt();
         if (value >= 100){
-            if (value == 100){
-                System.out.printf("%d nota(s) de R$ 100,00", value);
+            if (value % 100 == 0){
+                int notasDe100 = value / 100;
+                System.out.printf("%d nota(s) de R$ 100,00", notasDe100);
             }
 
         }

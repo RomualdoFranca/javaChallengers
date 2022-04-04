@@ -14,9 +14,6 @@ public class timeConversion {
         Scanner sc = new Scanner(System.in);
         System.out.println("Time Conversion\n\nInput the seconds:");
         int N = sc.nextInt();
-
-        System.out.println("Time Conversion\n\nInput the seconds:");
-        int N = sc.nextInt();
         int hour, minuts, seconds;
 
         //  Os segundos inseridos resulta em menos de uma hora
