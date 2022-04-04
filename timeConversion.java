@@ -12,10 +12,8 @@ public class timeConversion {
         Print the read time in the input file (seconds) converted in hours:minutes:seconds like the following example.
         */
         Scanner sc = new Scanner(System.in);
-<<<<<<< HEAD
         System.out.println("Time Conversion\n\nInput the seconds:");
         int N = sc.nextInt();
-=======
 
         System.out.println("Time Conversion\n\nInput the seconds:");
         int N = sc.nextInt();
@@ -48,7 +46,6 @@ public class timeConversion {
         }else {
             System.out.printf("0:0:%d", N);
         }
->>>>>>> test
         sc.close();
     }
 }
