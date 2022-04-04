@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 *.iml
 .idea
+=======
+     company.iml
+     **.idea/
+>>>>>>> test
