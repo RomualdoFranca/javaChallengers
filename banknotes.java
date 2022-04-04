@@ -18,14 +18,31 @@ public class banknotes {
         Locale.setDefault(Locale.US);
         Scanner sc  = new Scanner(System.in);
         int value;
-        System.out.println("Informe o valor do saque:");
+        System.out.println("Informe o valor do saque:\n" +
+                "Cédulas disponíveis 2, 5, 10, 20, 50, 100");
         value = sc.nextInt();
-        if (value >= 100){
-            if (value == 100){
-                System.out.printf("%d nota(s) de R$ 100,00", value);
+
+
+        if (value % 100 == 0){
+            int notasDe100 = value / 100;
+            System.out.printf("%d nota(s) de R$ 100,00\n", notasDe100);
+
+        }else if (value > 100){
+            int notasDe100 = value / 100;
+            System.out.printf("%d nota(s) de R$ 100,00\n", notasDe100);
+            int restoValue = value - (notasDe100 * 100);
+            if (restoValue >= 50){
+                System.out.println("1 nota(s) de R$ 50,00");
+                int notasDe20 = (restoValue - 50) / 20;
             }
 
+
         }
+
+
+
+
+
         sc.close();
     }
 }
