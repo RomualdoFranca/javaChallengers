@@ -19,19 +19,26 @@ public class banknotes {
         Scanner sc  = new Scanner(System.in);
         int value;
         System.out.println("Informe o valor do saque:\n" +
-                "Cédulas disponíveis 2, 5, 10, 30, 50, 100");
+                "Cédulas disponíveis 2, 5, 10, 20, 50, 100");
         value = sc.nextInt();
-        int notasDe100 = value / 100;
-//        int notasDe50 = value % 100;
-        int notasDe20 = value / 20;
-        int notasDe10 = value / 10;
-        int notasDe5 = value / 5;
-        int notasDe2 = value / 2;
-        System.out.printf("%d nota(s) de R$ 100,00\n", notasDe100);
-        if (value % 100 >= 50) {
-            int notasDe50 = (value % 100) / 50;
-            System.out.printf("%d nota(s) de R$ 50,00\n", notasDe50);
+
+
+        if (value % 100 == 0){
+            int notasDe100 = value / 100;
+            System.out.printf("%d nota(s) de R$ 100,00\n", notasDe100);
+
+        }else if (value > 100){
+            int notasDe100 = value / 100;
+            System.out.printf("%d nota(s) de R$ 100,00\n", notasDe100);
+            int restoValue = value - (notasDe100 * 100);
+            if (restoValue >= 50){
+                System.out.println("1 nota(s) de R$ 50,00");
+                int notasDe20 = (restoValue - 50) / 20;
+            }
+
+
         }
+
 
 
 
